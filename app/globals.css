@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-lora), ui-serif, Georgia, serif;
+
+  /* Tema "caderno" quente e claro — distinto dos demais projetos */
+  --color-ink: #3f3325;
+  --color-accent: #b45309; /* âmbar/terracota */
+  --color-paper: #fbf6ee;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  min-height: 100dvh;
+  color: var(--color-ink);
+  background:
+    radial-gradient(80% 50% at 50% -10%, #f6e6cf 0%, transparent 65%),
+    var(--color-paper);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: #fcd9a8;
+  color: #3f3325;
+}
